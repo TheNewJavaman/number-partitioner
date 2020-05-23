@@ -31,11 +31,9 @@ def partition(num, length, repeat_allowed=False, disallowed=[]):
 
 
 if __name__ == "__main__":
-    i = input("num: ")
-    length = input("len: ")
-
-    import pprint
-    pp = pprint.PrettyPrinter()
-
+    i = int(input("num: "))
+    length = int(input("len: "))
     partitions = partition(i, length)
-    pp.pprint(partitions)
+
+    for partition in partitions:
+        print(tuple(partition))
