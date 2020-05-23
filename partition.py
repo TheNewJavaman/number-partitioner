@@ -31,9 +31,15 @@ def partition(num, length, repeat_allowed=False, disallowed=[]):
 
 
 if __name__ == "__main__":
-    i = int(input("num: "))
-    length = int(input("len: "))
-    partitions = partition(i, length)
+    import sys
 
+    try:
+        i = int(sys.argv[1])
+        length = int(sys.argv[2])
+    except IndexError:
+        print("Error: include args in cmd")
+        exit()
+
+    partitions = partition(i, length)
     for partition in partitions:
         print(tuple(partition))
