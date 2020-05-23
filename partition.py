@@ -11,7 +11,7 @@ def partition(num, length, repeat_allowed=False, disallowed=[]):
     else:
         if not repeat_allowed:
             disallowed.append(num)
-        for i in range(1, num):
+        for i in range(1, 10):
             if i not in disallowed:
                 sub_results = partition(
                     num - i, length - 1, repeat_allowed, disallowed.copy())
