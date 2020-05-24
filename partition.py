@@ -5,7 +5,7 @@
 def partition(num, length, repeat_allowed=False, disallowed=[]):
     results = []
 
-    if length == 1:
+    if length == 1 and num <= 9 and num >= 1:
         results.append([num])
 
     else:
@@ -15,6 +15,8 @@ def partition(num, length, repeat_allowed=False, disallowed=[]):
             if i not in disallowed:
                 sub_results = partition(
                     num - i, length - 1, repeat_allowed, disallowed.copy())
+                if len(sub_results) > 0:
+                    break
                 for sub_result in sub_results:
                     if repeat_allowed or i not in sub_result:
                         sub_result.append(i)
