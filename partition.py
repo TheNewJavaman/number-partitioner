@@ -1,3 +1,5 @@
+#!/usr/bin python3
+
 # Finds all the ways to add up to a number with other numbers!
 # Uses a recursive, brute-force function
 # Loads simple parameters from cli
