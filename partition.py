@@ -45,4 +45,4 @@ if __name__ == "__main__":
 
     partitions = partition(i, length)
     for partition in partitions:
-        print(tuple(partition))
+        print(partition)
